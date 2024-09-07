@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     "apis.users.apps.UsersConfig",
     "apis.blog.apps.BlogConfig",
     "apis.todo.apps.TodoConfig",
+    "apis.library.apps.LibraryConfig",
 ]
 
 MIDDLEWARE = [

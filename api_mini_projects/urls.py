@@ -43,4 +43,5 @@ urlpatterns = [
     path("api/users/", include("apis.users.urls")),
     path("api/blog/", include("apis.blog.urls")),
     path("api/todo/", include("apis.todo.urls")),
+    path("api/library/", include("apis.library.urls")),
 ]
