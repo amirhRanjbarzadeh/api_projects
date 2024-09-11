@@ -42,6 +42,10 @@ class PasswordChangeSerializer(serializers.Serializer):
         if not user.check_password(value):
             raise serializers.ValidationError("Old password is incorrect")
         return value
+    def validate(self, data):
+        if data['new_password'] != data['new_password_again']:
+            raise serializers.ValidationError("The new passwords do not match.")
+        return data
 
     def save(self):
         user = self.context["request"].user
